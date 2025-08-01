@@ -15,3 +15,7 @@ img {
 	border: 2px solid #f8d56b;
 	border-radius: 5px;
 	}
+.active {
+	font-weight:bold;
+	color: #0066cc
+}
