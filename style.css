@@ -19,3 +19,66 @@ img {
 	font-weight:bold;
 	color: #0066cc
 }
+
+#nations-container {
+    margin: 20px 0;
+    position: relative;
+}
+
+#nations-toggle {
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: white; /* отвечает за цвет в названии */ 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#nations-toggle:hover {
+    background: #45a049;
+}
+
+#nations-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 5px;
+}
+
+#nations-dropdown.show {
+    max-height: 500px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#nation-search {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#nations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.nation-item {
+    padding: 8px;
+    background: blue;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nation-item:hover {
+    background: grey;
+}

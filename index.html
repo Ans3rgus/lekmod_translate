@@ -12,7 +12,15 @@
         <div style="width: 200px; padding: 20px;">
             <h3>Меню</h3>
             <ul style="list-style-type: none; padding: 0;">
-                <li><a href="#">Нации</a></li>
+                <li><a href="#">Нации</a>
+				<div id="nations-container">
+					<button id="nations-toggle">Показать список наций (78)</button>
+					<div id="nations-dropdown" class="hidden">
+						<input type="text" id="nation-search" placeholder="Поиск нации...">
+						<div id="nations-list"></div>
+					</div>
+				</div>
+				</li>
                 <li><a href="#">Строения</a></li>
                 <li><a href="#">Религия</a></li>
                 <li><a href="#">Культура</a></li>
