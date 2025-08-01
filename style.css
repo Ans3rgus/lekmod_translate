@@ -1,0 +1,17 @@
+body {
+	margin: 0;
+	padding: 20px;
+	font-family: Arial, sans-serif;
+	background: linear-gradient(135deg, #000000, #200122);
+	color: #fff;
+	min-height: 100vh;
+	}
+h1, h2 {
+	color: #f8d56b;
+	}
+img {
+	max-width: 100%;
+	height: auto;
+	border: 2px solid #f8d56b;
+	border-radius: 5px;
+	}
