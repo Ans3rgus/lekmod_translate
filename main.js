@@ -12,7 +12,6 @@ document.querySelectorAll('ul li a').forEach(link => {
 const nations = [
     "akkad", "aksum", "america", "arabia", "argentina",
 	"armenia","assyria","australia","austria","ayybids"
-    // ... остальные нации (убедитесь, что названия совпадают с именами папок)
 ];
 
 function initNationsDropdown() {
@@ -23,7 +22,6 @@ function initNationsDropdown() {
     
     // Функция для перехода на страницу нации
     function goToNationPage(nations) {
-        // Формируем путь: nationName/nationName.html
         const path = `${encodeURIComponent("nation")}/${encodeURIComponent(nations)}/${encodeURIComponent(nations)}.html`;
         window.location.href = path;
     }
@@ -61,5 +59,6 @@ function initNationsDropdown() {
     // Инициализация
     renderNations();
 }
+
 
 document.addEventListener('DOMContentLoaded', initNationsDropdown);
