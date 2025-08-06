@@ -11,7 +11,9 @@ document.querySelectorAll('ul li a').forEach(link => {
 // Список 78 наций (должен точно соответствовать именам папок)
 const nations = [
     "akkad", "aksum", "america", "arabia", "argentina",
-	"armenia","assyria","australia","austria","ayybids"
+	"armenia","assyria","australia","austria","ayyubids",
+	"aztecs", "babylon", "belgium", "boers", "bolivia",
+	"brazil", "brunei", "bulgaria", "burma", "byzantium"
 ];
 
 function initNationsDropdown() {
@@ -62,3 +64,4 @@ function initNationsDropdown() {
 
 
 document.addEventListener('DOMContentLoaded', initNationsDropdown);
+
