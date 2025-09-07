@@ -3,44 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Онлайн версия Lekmod</title>
-	<link rel="stylesheet" href="style.css">
+    <title>Lekmod Online | Цивилизация 5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="display: flex;">
-        <!-- Боковое меню -->
-        <div style="width: 200px; padding: 20px;">
-            <h3>Меню</h3>
-            <ul style="list-style-type: none; padding: 0;">
-                <li><a href="#">Нации</a>
-				<div id="nations-container">
-					<button id="nations-toggle">Показать список наций (78)</button>
-					<div id="nations-dropdown" class="hidden">
-						<input type="text" id="nation-search" placeholder="Поиск нации...">
-						<div id="nations-list"></div>
-					</div>
-				</div>
-				</li>
-                <li><a href="#">Строения</a></li>
-                <li><a href="#">Религия</a></li>
-                <li><a href="#">Культура</a></li>
-            </ul>
+    <!-- Верхняя панель навигации -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <i class="fas fa-crown"></i>
+            <span>Lekmod Online</span>
         </div>
+        <div class="nav-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Поиск по модификации...">
+        </div>
+        <div class="nav-theme">
+            <button id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Боковое меню -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Навигация</h3>
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-item active">
+                    <a href="#">
+                        <i class="fas fa-flag"></i>
+                        <span>Нации</span>
+                    </a>
+                    <div class="submenu">
+                        <div id="nations-container">
+                            <button id="nations-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>Все нации (78)</span>
+                            </button>
+                            <div id="nations-dropdown" class="hidden">
+                                <div class="search-container">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" id="nation-search" placeholder="Поиск нации...">
+                                </div>
+                                <div id="nations-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fas fa-building"></i>
+                        <span>Строения</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fas fa-church"></i>
+                        <span>Религия</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fas fa-monument"></i>
+                        <span>Культура</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Баланс</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fas fa-book"></i>
+                        <span>Руководство</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name">Гость</span>
+                        <span class="user-status">Не авторизован</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
         <!-- Основное содержимое -->
-        <div style="flex: 1; padding: 20px;">
-            <h1>Онлайн версия перевода Lekmod</h1>
-            <p>Создана Ans3r</p>
-            <p>Страница автора: <a href="#">https://github.com/Ans3rgus</a></p>
-            <p>Ссылка на LekMod v32.8: <a href="#">https://docs.google.com/document/d/11dnyCzzTAE1S-40utBq3QskklyLrXJztMCprR-cainY/edit?tab=t.0</a></p>
-			
-			
-            <div id="content">
-                <!-- Здесь будет отображаться контент в зависимости от выбора в меню -->
-                <p>Выберите раздел в боковом меню для просмотра информации.</p>
+        <main class="content-area">
+            <div class="content-header">
+                <h1>Онлайн версия перевода Lekmod</h1>
+                <div class="breadcrumb">
+                    <a href="#">Главная</a> / <span>Обзор</span>
+                </div>
             </div>
-        </div>
+            
+            <div class="welcome-panel">
+                <div class="welcome-content">
+                    <h2>Добро пожаловать в энциклопедию Lekmod</h2>
+                    <p>Здесь вы найдёте информацию о всех изменениях, нациях, зданиях и механиках модификации Lekmod для Civilization V</p>
+                    <div class="welcome-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-flag"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">78</span>
+                                <span class="stat-label">Наций</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">120+</span>
+                                <span class="stat-label">Строений</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-sync"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">v32.8</span>
+                                <span class="stat-label">Версия</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="welcome-image">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+            </div>
+            
+            <div class="info-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Обновления v32.8</h3>
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Последние изменения баланса, новые нации и исправления ошибок в текущей версии мода.</p>
+                        <button class="card-action">Подробнее <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Стратегии</h3>
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Руководства по оптимальному развитию для разных типов наций и условий игры.</p>
+                        <button class="card-action">Изучить <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Сообщество</h3>
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Присоединяйтесь к дискуссиям, задавайте вопросы и делитесь своими стратегиями.</p>
+                        <button class="card-action">Присоединиться <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="author-section">
+                <div class="author-info">
+                    <h3>Об авторе перевода</h3>
+                    <p>Создано Ans3r</p>
+                    <p>Страница автора: <a href="#">https://github.com/Ans3rgus</a></p>
+                    <p>Ссылка на LekMod v32.8: <a href="#">https://docs.google.com/document/d/11dnyCzzTAE1S-40utBq3QskklyLrXJztMCprR-cainY/edit?tab=t.0</a></p>
+                </div>
+            </div>
+        </main>
     </div>
-<script src="main.js"></script>	
+
+    <script src="main.js"></script>
 </body>
 </html>
