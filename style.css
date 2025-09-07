@@ -14,6 +14,13 @@
     --border-radius: 8px;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     --transition: all 0.3s ease;
+    
+    /* Новые цвета для пунктов меню */
+    --building-color: #4fc3f7;    /* Светло-голубой для Строения */
+    --religion-color: #ffb74d;    /* Светло-оранжевый для Религия */
+    --culture-color: #ba68c8;     /* Светло-фиолетовый для Культура */
+    --balance-color: #4db6ac;     /* Светло-бирюзовый для Баланс */
+    --guide-color: #ff8a65;       /* Светло-коралловый для Руководство */
 }
 
 * {
@@ -162,20 +169,85 @@ body {
     display: flex;
     align-items: center;
     padding: 12px 20px;
-    color: var(--text-secondary);
     text-decoration: none;
     transition: var(--transition);
     border-left: 4px solid transparent;
 }
 
-.menu-item > a:hover {
+/* Нации - сохраняем оригинальный цвет */
+.menu-item:first-child > a {
+    color: var(--text-secondary);
+}
+
+.menu-item:first-child > a:hover {
     background: var(--bg-tertiary);
     color: var(--text-primary);
 }
 
-.menu-item.active > a {
+.menu-item:first-child.active > a {
     background: var(--bg-tertiary);
     color: var(--accent-primary);
+    border-left-color: var(--accent-primary);
+}
+
+/* Специальные цвета для остальных пунктов меню */
+.menu-item:nth-child(2) > a { /* Строения */
+    color: var(--building-color);
+}
+
+.menu-item:nth-child(3) > a { /* Религия */
+    color: var(--religion-color);
+}
+
+.menu-item:nth-child(4) > a { /* Культура */
+    color: var(--culture-color);
+}
+
+.menu-item:nth-child(5) > a { /* Баланс */
+    color: var(--balance-color);
+}
+
+.menu-item:nth-child(6) > a { /* Руководство */
+    color: var(--guide-color);
+}
+
+.menu-item > a:hover {
+    background: var(--bg-tertiary);
+}
+
+/* Убедимся, что цвета остаются яркими при наведении и в активном состоянии */
+.menu-item:nth-child(2) > a:hover,
+.menu-item:nth-child(2).active > a {
+    color: var(--building-color);
+    text-shadow: 0 0 8px rgba(79, 195, 247, 0.7);
+}
+
+.menu-item:nth-child(3) > a:hover,
+.menu-item:nth-child(3).active > a {
+    color: var(--religion-color);
+    text-shadow: 0 0 8px rgba(255, 183, 77, 0.7);
+}
+
+.menu-item:nth-child(4) > a:hover,
+.menu-item:nth-child(4).active > a {
+    color: var(--culture-color);
+    text-shadow: 0 0 8px rgba(186, 104, 200, 0.7);
+}
+
+.menu-item:nth-child(5) > a:hover,
+.menu-item:nth-child(5).active > a {
+    color: var(--balance-color);
+    text-shadow: 0 0 8px rgba(77, 182, 172, 0.7);
+}
+
+.menu-item:nth-child(6) > a:hover,
+.menu-item:nth-child(6).active > a {
+    color: var(--guide-color);
+    text-shadow: 0 0 8px rgba(255, 138, 101, 0.7);
+}
+
+.menu-item.active > a {
+    background: var(--bg-tertiary);
     border-left-color: var(--accent-primary);
 }
 
@@ -284,6 +356,7 @@ body {
     cursor: pointer;
     transition: var(--transition);
     font-size: 0.9rem;
+    color: var(--text-primary);
 }
 
 .nation-item:hover {
@@ -320,6 +393,7 @@ body {
 .user-name {
     font-weight: bold;
     font-size: 0.9rem;
+    color: var(--text-primary);
 }
 
 .user-status {
@@ -414,6 +488,7 @@ body {
 .stat-number {
     font-weight: bold;
     font-size: 1.2rem;
+    color: var(--text-primary);
 }
 
 .stat-label {
