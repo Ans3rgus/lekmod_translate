@@ -17,7 +17,7 @@ img {
 	}
 .active {
 	font-weight:bold;
-	color: #0066cc
+	color: #f8d56b
 }
 
 #nations-container {
@@ -81,4 +81,5 @@ img {
 
 .nation-item:hover {
     background: grey;
+
 }
