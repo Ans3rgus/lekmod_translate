@@ -12,7 +12,7 @@ function initNationsDropdown() {
     const searchInput = document.getElementById('nation-search');
     const nationsList = document.getElementById('nations-list');
     
-    // Список 78 наций (должен точно соответствовать именам папок)
+    // Список 112 наций (должен точно соответствовать именам папок)
     const nations = [
         "akkad", "aksum", "america", "arabia", "argentina",
         "armenia","assyria","australia","austria","ayyubids",
@@ -70,7 +70,7 @@ function initNationsDropdown() {
         toggleBtn.querySelector('span').textContent = 
             dropdown.classList.contains('show') ? 
             `Скрыть список наций (${nationCount})` : 
-            'Показать список наций (78)';
+            'Показать список наций (112)';
     });
     
     // Поиск по нациям
@@ -159,3 +159,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
